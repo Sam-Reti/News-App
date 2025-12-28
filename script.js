@@ -1,16 +1,13 @@
 const articleContainer = document.getElementById("article-container");
 
 function fetchNews(category = "general") {
-  const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=80e6eb2f12e143ae9dfd444ce893d580`;
+  const url = `https://YOUR-SITE.netlify.app/.netlify/functions/news?category=${category}`;
 
   fetch(url)
-    .then((response) => response.json())
-
-    .then((data) => {
-      renderArticles(data.articles);
-    });
+    .then((res) => res.json())
+    .then((data) => renderArticles(data.articles || []))
+    .catch(console.error);
 }
-
 document.querySelectorAll("nav button").forEach((button) => {
   button.addEventListener("click", () => {
     const category = button.dataset.category;
