@@ -1,7 +1,7 @@
 const articleContainer = document.getElementById("article-container");
 
 function fetchNews(category = "general") {
-  const url = `https://YOUR-SITE.netlify.app/.netlify/functions/news?category=${category}`;
+  const url = `https://radiant-tiramisu-9ec36d.netlify.app/.netlify/functions/news?category=${category}`;
 
   fetch(url)
     .then((res) => res.json())
