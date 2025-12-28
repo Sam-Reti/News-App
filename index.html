@@ -8,17 +8,40 @@
   </head>
   <body>
     <header>
-      <logo>
+      <nav class="nav-desktop">
+        <logo>
+          <button data-category="general">
+            <img id="logo" src="Images/logo news.png" />
+          </button>
+        </logo>
+
+        <button data-category="business">Business</button>
+        <button data-category="entertainment">Entertainment</button>
+        <button data-category="health">Health</button>
+        <button data-category="science">Science</button>
+        <button data-category="sports">Sports</button>
+        <button data-category="technology">Technology</button>
+      </nav>
+
+      <logo id="mobile-logo">
         <img id="logo" src="Images/logo news.png" />
       </logo>
-      <nav>
-        <li>Science</li>
-        <li>Tech</li>
-        <li>Sports</li>
-        <li>Entertainment</li>
-      </nav>
+
+      <details class="nav-mobile dropdown">
+        <summary>▾ Categories</summary>
+        <nav class="dropdown-menu">
+          <button data-category="business">Business</button>
+          <button data-category="entertainment">Entertainment</button>
+          <button data-category="general">General</button>
+          <button data-category="health">Health</button>
+          <button data-category="science">Science</button>
+          <button data-category="sports">Sports</button>
+          <button data-category="technology">Technology</button>
+        </nav>
+      </details>
     </header>
     <div id="article-container"></div>
+
     <script src="script.js"></script>
   </body>
 </html>
